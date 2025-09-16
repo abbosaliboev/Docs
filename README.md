@@ -1,64 +1,24 @@
-# Real-Time Multi-Camera Safety Monitoring System
+References
 
-This repository contains the implementation of our *Real-Time Multi-Camera Safety Monitoring System* designed for construction and industrial sites.  
-The system integrates *PPE detection, fall detection, fire hazard recognition, and danger-zone monitoring* into a unified pipeline.
+Al-Azani, M.; Luqman, H.; Al-Arraj, H.; Al-Hammed, M.; et al. 2024. *Real-time monitoring of personal protective equipment compliance in surveillance cameras*. IEEE Access. doi:10.1109/ACCESS.2024.1234567. (update DOI)
 
----
+Aziz, S.; Shah, S. A.; Song, H.; and Maple, C. 2021. *Deep learning-based PPE detection for construction site safety*. Automation in Construction 129: 103819. doi:10.1016/j.autcon.2021.103819.
 
-## Features
-- *Multi-camera support* with end-to-end synchronization
-- *High FPS performance* (30–40 FPS across 4+ streams)
-- PPE compliance monitoring (*helmet, vest, etc.*)
-- Fire hazard detection in real-time
-- Fall detection with pose estimation backbone
-- Polygon-based *danger zone* definition and violation alerts
-- Web-based interface for live monitoring and analytics
+Bochkovskiy, A.; Wang, C.-Y.; and Liao, H.-Y. M. 2020. *YOLOv4: Optimal speed and accuracy of object detection*. arXiv preprint arXiv:2004.10934.
 
----
+Chen, J.; Li, Y.; Li, J.; and Deng, J. 2020. *Multi-camera real-time human activity recognition using deep learning*. Pattern Recognition Letters 131: 23–29. doi:10.1016/j.patrec.2019.11.021.
 
-## System Architecture
-- **Backend**: Python, PyTorch, Django
-- **Frontend**: React (real-time visualization)
-- **Models**: YOLOv4/YOLOv8, custom pose-based fall detection
-- **Deployment**: Docker + RTSP camera streaming
+Chen, Y.; and Demachi, K. 2020. *Automatic detection of protective equipment using YOLOv3 at Fukushima Daiichi Nuclear Power Station*. Journal of Radiation Research 61(5): 758–765. doi:10.1093/jrr/rraa053.
 
----
+Gu, Y.; Wang, Y.; Shi, L.; Li, N.; Zhuang, L.; and Xu, S. 2021. *Automatic detection of safety helmet wearing based on head region location and YOLOv4*. Advances in Civil Engineering 2021: 6625562. doi:10.1155/2021/6625562.
 
-## Dataset & Training
-We trained and evaluated the models using a mix of:
-- Publicly available PPE and safety datasets  
-- Our own *multi-camera industrial scenario recordings*  
-- Synthetic augmentation to improve robustness against *occlusion, motion blur, and varying lighting conditions*
+Long, X.; Cui, Y.; and Zheng, W. 2019. *Automatic detection of safety helmet wearing based on modified SSD*. Journal of Physics: Conference Series 1213(5): 052064. doi:10.1088/1742-6596/1213/5/052064.
 
----
+Muhammad, K.; Ahmad, J.; Mehmood, I.; Rho, S.; Baik, S. W.; and de Albuquerque, V. H. C. 2018. *Efficient fire detection for uncertain surveillance environments*. IEEE Transactions on Industrial Informatics 14(9): 3946–3955. doi:10.1109/TII.2018.2791943.
 
-## Results
-- End-to-end throughput: *30–40 FPS across 4 cameras*  
-- PPE detection: *mAP ≈ 95% at 60+ FPS (single model)*  
-- Fire detection: *Accuracy ≈ 96%*  
-- Fall detection: *≈ 94% accuracy, 40+ FPS*  
-- Danger-zone violation detection: *96% accuracy, ~50 FPS*
+Nath, N. D.; Behzadan, A. H.; and Paal, S. G. 2020. *Deep learning for site safety: Real-time detection of personal protective equipment*. Automation in Construction 112: 103085. doi:10.1016/j.autcon.2020.103085.
 
----
+Safe-Construct. 2025. *Safe-Construct: 3D multi-view safety violation recognition in construction environments*. arXiv preprint arXiv:2504.10880.
 
-## References
-For academic background and comparison, please see the following works:
+Zaidi, S. M.; Yang, L.; Abbas, H.; Hussain, R.; Lee, C.; and Park, Y. 2024. *Vision-based construction safety monitoring utilizing temporal analysis to reduce false alarms*. Buildings 14(6): 1878. doi:10.3390/buildings14061878.
 
-- Nath, N. D.; Behzadan, A. H.; and Paal, S. G. 2020. *Deep learning for site safety: Real-time detection of personal protective equipment*. Automation in Construction 112: 103085.  
-- Gu, Y.; Wang, Y.; Shi, L.; Li, N.; Zhuang, L.; and Xu, S. 2021. *Automatic detection of safety helmet wearing based on head region location and YOLOv4*. Advances in Civil Engineering 2021: 6625562.  
-- Chen, Y.; and Demachi, K. 2020. *Automatic detection of protective equipment using YOLOv3 at Fukushima Daiichi Nuclear Power Station*. Journal of Radiation Research 61(5): 758–765.  
-- Zaidi, S. M.; Yang, L.; Abbas, H.; Hussain, R.; Lee, C.; and Park, Y. 2024. *Vision-based construction safety monitoring utilizing temporal analysis to reduce false alarms*. Buildings 14(6): 1878.  
-- Safe-Construct. 2025. *Safe-Construct: 3D multi-view safety violation recognition in construction environments*. arXiv preprint arXiv:2504.10880.
-
----
-
-## Citation
-If you use this codebase in your research, please cite our paper:
-
-```bibtex
-@inproceedings{YourPaper2025,
-  title={Real-Time Multi-Camera Safety Monitoring System},
-  author={Your Name and Co-Authors},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  year={2025}
-}
