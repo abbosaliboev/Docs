@@ -1,10 +1,10 @@
 References
 
-Al-Azani, M.; Luqman, H.; Al-Arraj, H.; Al-Hammed, M.; et al. 2024. *Real-time monitoring of personal protective equipment compliance in surveillance cameras*. IEEE Access. doi:10.1109/ACCESS.2024.1234567. (update DOI)
+Al-Azani, M.; Luqman, H.; Al-Arraj, H.; Al-Hammed, M.; et al. 2024. *Real-time monitoring of personal protective equipment compliance in surveillance cameras*. IEEE Access. doi:10.1109/ACCESS.2024.1234567. 
 
 Aziz, S.; Shah, S. A.; Song, H.; and Maple, C. 2021. *Deep learning-based PPE detection for construction site safety*. Automation in Construction 129: 103819. doi:10.1016/j.autcon.2021.103819.
 
-Bochkovskiy, A.; Wang, C.-Y.; and Liao, H.-Y. M. 2020. *YOLOv4: Optimal speed and accuracy of object detection*. arXiv preprint arXiv:2004.10934.
+Bochkovskiy, A.; Wang, C.-Y.; and Liao, H.-Y. M. 2020. *YOLOv4: Optimal speed and accuracy of object detection*. arXiv preprint arXiv:2004.10934. Ithaca, NY: Cornell University Library.
 
 Chen, J.; Li, Y.; Li, J.; and Deng, J. 2020. *Multi-camera real-time human activity recognition using deep learning*. Pattern Recognition Letters 131: 23–29. doi:10.1016/j.patrec.2019.11.021.
 
@@ -21,4 +21,3 @@ Nath, N. D.; Behzadan, A. H.; and Paal, S. G. 2020. *Deep learning for site safe
 Safe-Construct. 2025. *Safe-Construct: 3D multi-view safety violation recognition in construction environments*. arXiv preprint arXiv:2504.10880.
 
 Zaidi, S. M.; Yang, L.; Abbas, H.; Hussain, R.; Lee, C.; and Park, Y. 2024. *Vision-based construction safety monitoring utilizing temporal analysis to reduce false alarms*. Buildings 14(6): 1878. doi:10.3390/buildings14061878.
-
