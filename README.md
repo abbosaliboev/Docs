@@ -1,4 +1,4 @@
-# **MediQuest - 교수님 발표 자료** 📋
+# **MediQuest -  자료** 📋
 
 ---
 
