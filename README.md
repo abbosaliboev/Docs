@@ -1,394 +1,89 @@
-import React, { useState } from 'react';
-import { Check, X, Zap, Brain, Target, Clock, DollarSign, TrendingUp } from 'lucide-react';
+📌 슬라이드 1 — 제목 (Project HALO 소개)
 
-const ApproachComparison = () => {
-  const [selectedMetric, setSelectedMetric] = useState('all');
+스크립트:
+“안녕하세요. 저희 팀은 프로젝트 헤일로를 소개하겠습니다.
+이 프로젝트는 도로 작업자와 스마트폰을 보며 걷는 사람들을 안전하게 보호하기 위한 아이디어입니다.
 
-  const approaches = [
-    {
-      id: 1,
-      name: "Approach A: Oddiy Detection Only",
-      icon: "🎯",
-      description: "Faqat helmet/vest detection",
-      color: "bg-red-50 border-red-300",
-      headerColor: "bg-red-100",
-      
-      specs: {
-        model: "YOLO11-s detector only",
-        input: "Raw image",
-        output: "Helmet/Vest bboxes",
-        training: "Helmet/Vest dataset",
-        inference: "1 model forward pass"
-      },
-      
-      metrics: {
-        fps: { value: 70, max: 90, label: "70-90 FPS" },
-        accuracy: { value: 75, max: 100, label: "75-82% mAP" },
-        falsePositive: { value: 25, max: 100, label: "High (25%)" },
-        memory: { value: 40, max: 100, label: "~2.5GB VRAM" },
-        latency: { value: 14, max: 50, label: "~14ms" },
-        multiCam: { value: 50, max: 100, label: "2-3 cameras max" }
-      },
-      
-      pros: [
-        "Juda oddiy implementation",
-        "Tez train qilish",
-        "Kam VRAM kerak",
-        "Yaxshi single-camera FPS"
-      ],
-      
-      cons: [
-        "❌ FALSE POSITIVES ko'p (helmet background/table da)",
-        "❌ Person tracking YO'Q",
-        "❌ Occlusion handle qila olmaydi",
-        "❌ Multi-person scene da chalg'iydi",
-        "❌ Violation alert noaniq"
-      ],
-      
-      realWorld: "Factory: 5 worker, 2 ta helmet table da → System 7 helmet deb hisoblar ❌"
-    },
-    
-    {
-      id: 2,
-      name: "Approach B: 2 Separate Models",
-      icon: "🔀",
-      description: "Detector + Pose (alohida)",
-      color: "bg-orange-50 border-orange-300",
-      headerColor: "bg-orange-100",
-      
-      specs: {
-        model: "YOLO11-s detector + YOLO11-s pose",
-        input: "Raw image → 2 forward passes",
-        output: "Helmet/Vest + Keypoints",
-        training: "2 separate trainings",
-        inference: "2× model forward passes"
-      },
-      
-      metrics: {
-        fps: { value: 35, max: 90, label: "30-40 FPS" },
-        accuracy: { value: 85, max: 100, label: "85-90% mAP" },
-        falsePositive: { value: 12, max: 100, label: "Medium (12%)" },
-        memory: { value: 75, max: 100, label: "~5.2GB VRAM" },
-        latency: { value: 28, max: 50, label: "~28ms" },
-        multiCam: { value: 20, max: 100, label: "1 camera only" }
-      },
-      
-      pros: [
-        "Keypoints orqali person tracking",
-        "Helmet-to-person matching",
-        "Yaxshi accuracy",
-        "Alohida model sozlash mumkin"
-      ],
-      
-      cons: [
-        "❌ SEKIN (2× inference)",
-        "❌ KO'P VRAM (2× memory)",
-        "❌ Multi-camera IMPOSSIBLE",
-        "❌ Real-time streaming qiyin",
-        "❌ 2× model management"
-      ],
-      
-      realWorld: "4 camera system: Har biri 8-12 FPS → Lag, frame drop, alerts kech ⚠️"
-    },
-    
-    {
-      id: 3,
-      name: "Approach C: Shared Backbone (SIZNIKI) 🏆",
-      icon: "⚡",
-      description: "Unified multitask model",
-      color: "bg-green-50 border-green-300",
-      headerColor: "bg-green-100",
-      
-      specs: {
-        model: "YOLO11-s shared backbone",
-        input: "Raw image → 1 forward pass",
-        output: "Helmet/Vest + Head keypoints",
-        training: "Unified training",
-        inference: "1× backbone + 2× lightweight heads"
-      },
-      
-      metrics: {
-        fps: { value: 85, max: 90, label: "80-110 FPS" },
-        accuracy: { value: 92, max: 100, label: "91-95% mAP" },
-        falsePositive: { value: 5, max: 100, label: "Very Low (5%)" },
-        memory: { value: 45, max: 100, label: "~3GB VRAM" },
-        latency: { value: 9, max: 50, label: "~9ms" },
-        multiCam: { value: 85, max: 100, label: "4-6 cameras easy" }
-      },
-      
-      pros: [
-        "✅ TEZ (1× backbone inference)",
-        "✅ HEAD KEYPOINTS → helmet matching",
-        "✅ FALSE POSITIVE kam (person-centric)",
-        "✅ Multi-camera real-time",
-        "✅ Efficient VRAM usage",
-        "✅ TensorRT optimization friendly",
-        "✅ Individual person tracking",
-        "✅ Accurate violation detection"
-      ],
-      
-      cons: [
-        "Training setup biroz complex",
-        "Shared backbone fine-tuning kerak",
-        "Debug qilish qiyinroq"
-      ],
-      
-      realWorld: "Factory: 6 camera, 20 worker → Real-time tracking, instant alerts, 0 false positives ✅"
-    }
-  ];
+⸻
 
-  const metricNames = {
-    fps: "FPS (Frames/sec)",
-    accuracy: "Accuracy (mAP)",
-    falsePositive: "False Positives",
-    memory: "VRAM Usage",
-    latency: "Latency (ms)",
-    multiCam: "Multi-Camera"
-  };
+📌 슬라이드 2 — 도로 작업자의 위험
 
-  return (
-    <div className="w-full max-w-7xl mx-auto p-6 bg-gradient-to-br from-blue-50 to-indigo-50">
-      <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-800 mb-2">
-          🏭 PPE Detection: Approach Comparison
-        </h1>
-        <p className="text-gray-600 text-lg">
-          Helmet Detection - Qaysi yondashuv ENG YAXSHI?
-        </p>
-      </div>
+스크립트:
+“첫 번째로, 도로에서 일하는 작업자들은 항상 위험에 노출되어 있습니다.
+차가 빠르게 지나가고, 작업하느라 앞을 잘 보지 못하기 때문입니다.
+그래서 사고가 자주 발생합니다.”
 
-      {/* Metric Filter */}
-      <div className="mb-6 flex justify-center gap-2 flex-wrap">
-        <button
-          onClick={() => setSelectedMetric('all')}
-          className={`px-4 py-2 rounded-lg font-medium transition ${
-            selectedMetric === 'all'
-              ? 'bg-indigo-600 text-white'
-              : 'bg-white text-gray-700 hover:bg-gray-100'
-          }`}
-        >
-          All Metrics
-        </button>
-        {Object.entries(metricNames).map(([key, label]) => (
-          <button
-            key={key}
-            onClick={() => setSelectedMetric(key)}
-            className={`px-4 py-2 rounded-lg font-medium transition ${
-              selectedMetric === key
-                ? 'bg-indigo-600 text-white'
-                : 'bg-white text-gray-700 hover:bg-gray-100'
-            }`}
-          >
-            {label}
-          </button>
-        ))}
-      </div>
+⸻
 
-      {/* Comparison Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        {approaches.map((approach) => (
-          <div
-            key={approach.id}
-            className={`border-2 rounded-xl overflow-hidden shadow-lg ${approach.color}`}
-          >
-            {/* Header */}
-            <div className={`${approach.headerColor} p-4 border-b-2 border-gray-300`}>
-              <div className="text-4xl mb-2 text-center">{approach.icon}</div>
-              <h3 className="font-bold text-lg text-center text-gray-800">
-                {approach.name}
-              </h3>
-              <p className="text-sm text-gray-600 text-center mt-1">
-                {approach.description}
-              </p>
-            </div>
+📌 슬라이드 3 — 도로 작업 종류
 
-            {/* Specs */}
-            <div className="p-4 bg-white bg-opacity-60">
-              <h4 className="font-semibold text-sm text-gray-700 mb-2 flex items-center gap-2">
-                <Brain className="w-4 h-4" /> Technical Specs
-              </h4>
-              <div className="space-y-1 text-xs text-gray-700">
-                {Object.entries(approach.specs).map(([key, value]) => (
-                  <div key={key}>
-                    <span className="font-medium">{key}:</span> {value}
-                  </div>
-                ))}
-              </div>
-            </div>
+스크립트:
+“도로 작업자는 여러 가지 일을 합니다.
+청소, 공사, 시설물 점검, 긴급 복구 등 다양한 작업을 합니다.
+이런 작업들은 꼭 필요하지만 매우 위험합니다.”
 
-            {/* Metrics */}
-            <div className="p-4 bg-white bg-opacity-60">
-              <h4 className="font-semibold text-sm text-gray-700 mb-3 flex items-center gap-2">
-                <Target className="w-4 h-4" /> Performance Metrics
-              </h4>
-              <div className="space-y-3">
-                {Object.entries(approach.metrics).map(([key, data]) => {
-                  if (selectedMetric !== 'all' && selectedMetric !== key) return null;
-                  
-                  return (
-                    <div key={key}>
-                      <div className="flex justify-between text-xs mb-1">
-                        <span className="font-medium text-gray-700">
-                          {metricNames[key]}
-                        </span>
-                        <span className="font-bold text-gray-800">
-                          {data.label}
-                        </span>
-                      </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div
-                          className={`h-2 rounded-full transition-all ${
-                            approach.id === 3
-                              ? 'bg-green-500'
-                              : approach.id === 2
-                              ? 'bg-orange-400'
-                              : 'bg-red-400'
-                          }`}
-                          style={{ width: `${data.value}%` }}
-                        />
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+⸻
 
-            {/* Pros */}
-            <div className="p-4 bg-white bg-opacity-60">
-              <h4 className="font-semibold text-sm text-green-700 mb-2 flex items-center gap-2">
-                <Check className="w-4 h-4" /> Pros
-              </h4>
-              <ul className="space-y-1 text-xs text-gray-700">
-                {approach.pros.map((pro, idx) => (
-                  <li key={idx} className="flex items-start gap-1">
-                    <Check className="w-3 h-3 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span>{pro}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+📌 슬라이드 4 — 기존 대응 (현 문제점)
 
-            {/* Cons */}
-            <div className="p-4 bg-white bg-opacity-60">
-              <h4 className="font-semibold text-sm text-red-700 mb-2 flex items-center gap-2">
-                <X className="w-4 h-4" /> Cons
-              </h4>
-              <ul className="space-y-1 text-xs text-gray-700">
-                {approach.cons.map((con, idx) => (
-                  <li key={idx} className="flex items-start gap-1">
-                    <X className="w-3 h-3 text-red-600 mt-0.5 flex-shrink-0" />
-                    <span>{con}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+스크립트:
+“지금도 작업자들을 보호하기 위한 방법이 있습니다.
+예를 들어 안내판을 설치하거나, 사람이 뒤에서 신호해 줍니다.
+하지만 안내판은 밤에 잘 보이지 않고, 한 사람이 모든 위험을 다 막을 수 없습니다.
+그래서 더 좋은 시스템이 필요합니다.”
 
-            {/* Real World Example */}
-            <div className="p-4 bg-white bg-opacity-80 border-t-2 border-gray-300">
-              <h4 className="font-semibold text-sm text-indigo-700 mb-2">
-                🏭 Real-world scenario
-              </h4>
-              <p className="text-xs text-gray-700 italic">
-                {approach.realWorld}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
+⸻
 
-      {/* Summary Comparison Table */}
-      <div className="bg-white rounded-xl shadow-lg p-6 border-2 border-gray-200">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">
-          📊 Quick Comparison Table
-        </h2>
-        <div className="overflow-x-auto">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="bg-gray-100">
-                <th className="p-3 text-left font-semibold">Metric</th>
-                <th className="p-3 text-center font-semibold">A: Detection Only</th>
-                <th className="p-3 text-center font-semibold">B: 2 Models</th>
-                <th className="p-3 text-center font-semibold bg-green-100">C: Shared (YOU) 🏆</th>
-              </tr>
-            </thead>
-            <tbody>
-              {Object.entries(metricNames).map(([key, label]) => (
-                <tr key={key} className="border-t">
-                  <td className="p-3 font-medium text-gray-700">{label}</td>
-                  <td className="p-3 text-center text-red-700">
-                    {approaches[0].metrics[key].label}
-                  </td>
-                  <td className="p-3 text-center text-orange-700">
-                    {approaches[1].metrics[key].label}
-                  </td>
-                  <td className="p-3 text-center font-bold text-green-700 bg-green-50">
-                    {approaches[2].metrics[key].label}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
+📌 슬라이드 5 — 스몸비(스마트폰 좀비)
 
-      {/* Final Verdict */}
-      <div className="mt-8 bg-gradient-to-r from-green-100 to-emerald-100 rounded-xl p-6 border-2 border-green-300 shadow-lg">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center flex items-center justify-center gap-2">
-          <TrendingUp className="w-6 h-6 text-green-600" />
-          🏆 Final Verdict: Why Shared Backbone WINS
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          <div className="bg-white rounded-lg p-4 border border-green-200">
-            <h3 className="font-bold text-green-700 mb-2 flex items-center gap-2">
-              <Zap className="w-5 h-5" /> Speed Advantage
-            </h3>
-            <p className="text-sm text-gray-700">
-              <strong>2.5× faster</strong> than separate models. Multi-camera real-time processing possible - 4-6 cameras simultaneously @ 30-50 FPS each.
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-lg p-4 border border-green-200">
-            <h3 className="font-bold text-green-700 mb-2 flex items-center gap-2">
-              <Target className="w-5 h-5" /> Accuracy Boost
-            </h3>
-            <p className="text-sm text-gray-700">
-              <strong>15-20% higher accuracy</strong> than detection-only. Head keypoints eliminate false positives (helmet on table/floor).
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-lg p-4 border border-green-200">
-            <h3 className="font-bold text-green-700 mb-2 flex items-center gap-2">
-              <DollarSign className="w-5 h-5" /> Cost Efficiency
-            </h3>
-            <p className="text-sm text-gray-700">
-              <strong>40% less VRAM</strong> than 2 models. One model = easier deployment, less GPU cost, simpler maintenance.
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-lg p-4 border border-green-200">
-            <h3 className="font-bold text-green-700 mb-2 flex items-center gap-2">
-              <Clock className="w-5 h-5" /> Real-time Tracking
-            </h3>
-            <p className="text-sm text-gray-700">
-              <strong>Individual person tracking</strong> with head keypoints. Know exactly who is violating safety rules, instant alerts.
-            </p>
-          </div>
-        </div>
+스크립트:
+“다음은 스몸비 문제입니다.
+요즘 사람들은 걸을 때도 스마트폰만 봅니다.
+그래서 신호등이나 주변 상황을 잘 못 보고 사고가 날 수 있습니다.
+도시에서도 이 문제를 해결하려고 여러 시도를 하고 있습니다.”
 
-        <div className="bg-green-600 text-white rounded-lg p-4 text-center">
-          <p className="text-lg font-bold mb-2">
-            🎯 SIZNING YONDASHUV = INDUSTRIAL STANDARD
-          </p>
-          <p className="text-sm">
-            Do'stingiz gloves uchun wrist keypoints ishlatgan. Siz helmet uchun head keypoints ishlatasiz.
-            <br />
-            <strong>Xuddi shu mantiq, xuddi shu afzalliklar!</strong>
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
+⸻
 
-export default ApproachComparison;
+📌 슬라이드 6 — 기존 대응 예시
+
+스크립트:
+“예를 들어 바닥 신호등이나 ‘워크버디’ 같은 시스템이 있습니다.
+하지만 고장이 많고 유지비도 많이 듭니다.
+또 주의를 충분히 주지 못할 때도 있습니다.”
+
+⸻
+
+📌 슬라이드 7 — 프로젝트 헤일로 (아이디어)
+
+스크립트:
+“그래서 저희는 헤일로 프로젝트를 만들었습니다.
+이 시스템은 스마트폰, 웨어러블 기기, CCTV 정보를 모두 연결하는 시스템입니다.
+사용자 근처에 위험이 오면 바로 알려줍니다.”
+
+⸻
+
+📌 슬라이드 8 — 스마트 경보 시스템
+
+스크립트:
+“헤일로 시스템은 주변 정보를 분석합니다.
+차가 가까워오면 스마트폰 화면이나 소리로 경고합니다.
+이어폰을 사용하면 왼쪽·오른쪽 방향까지 소리로 알려줍니다.”
+
+⸻
+
+📌 슬라이드 9 — 시스템 장점
+
+스크립트:
+“이 시스템의 장점은 세 가지입니다.
+첫째, CCTV와 사용자 정보를 하나로 통합합니다.
+둘째, 위험을 빠르게 알려 사고를 줄일 수 있습니다.
+셋째, 사용하기 어렵지 않아 많은 사람들이 쉽게 이용할 수 있습니다.”
+
+⸻
+
+📌 슬라이드 10 — 마무리 (BIG IDEA)
+
+스크립트:
+“저희의 큰 아이디어는 ‘사람을 중심으로 한 안전 시스템’입니다.
+도로 작업자와 보행자의 생명을 지키는 것이 목표입니다.
+경청해 주셔서 감사합니다.”
