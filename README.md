@@ -1,97 +1,114 @@
+🟦 1. Introduction
 
-📌 슬라이드 1 — 제목
-
-“안녕하세요. 저희는 프로젝트 헤일로를 소개하겠습니다.
-이 프로젝트는 도로 작업자와 스마트폰을 보며 걷는 사람들을 안전하게 보호하기 위한 아이디어입니다.
-
-⸻
-
-📌 슬라이드 2 — 도로 작업자의 위험
-
-“도로에서 일하는 작업자들은 항상 위험합니다.
-차가 빠르게 지나가고, 작업하느라 앞을 못 볼 때가 많습니다.
-특히 장비나 구조물 때문에 차가 오는 걸 늦게 볼 수 있습니다.
-그래서 사고가 자주 생깁니다.”
+“Hello, in this video I will show my HW3 project.
+For this homework, I made a small Flask web application connected to the database from HW2.”
 
 ⸻
 
-📌 슬라이드 3 — 도로 작업 종류
+🟦 2. App.py short explanation
 
-“작업자들은 여러 일을 합니다.
-쓰레기나 장애물 치우기, 공사, 시설물 점검 등 많은 일을 합니다.
-또 비나 눈으로 길이 망가지면 바로 고치기도 합니다.
-이런 일은 꼭 필요하지만, 항상 위험한 상황에서 이루어집니다.”
+“First, I will show the app.py file.
+
+Here I connect Flask to my MySQL database.
+Then I created routes for Users, Cars, Manufacturers, Insurance, Payment Cards, and Rentals.
+Each route takes data from the database or inserts new data.
+⸻
+
+🟦 3. Static images
+
+“Now I will show the static folder.
+Inside static/images/cars, I saved car images like Sonata, K5, GV80, Sportage, and others.
+These images are used in the Cars page.”
 
 ⸻
 
-📌 슬라이드 4 — 기존 대응 문제
+🟦 4. Templates folder
 
-“지금까지는 안내판을 세우거나, 사람이 뒤에서 손전등으로 안내해 줍니다.
-하지만 안내판은 밤에 잘 안 보이고,
-사람 한 명이 모든 위험을 막기에는 한계가 있습니다.
-그래서 더 좋은 방법이 필요합니다.”
-
-⸻
-
-📌 슬라이드 5 — 스몸비 문제
-
-“요즘은 스마트폰 보면서 걷는 사람이 많습니다.
-이런 사람들을 ‘스몸비’라고 부릅니다.
-신호등을 못 보거나, 차나 자전거를 못 보고 사고가 날 때가 많습니다.
-도시에서는 이 문제가 점점 커지고 있습니다.”
+“Here is the templates folder.
+base.html is the main layout.
+Other pages like home.html, users.html, cars.html, manufacturers.html, and payment_cards.html extend this base file.
+Also, I have add_user.html and add_car.html for inserting data.”
 
 ⸻
 
-📌 슬라이드 6 — 기존 스몸비 대응
-
-“스몸비 문제를 해결하려고 바닥 신호등 같은 것들이 생겼습니다.
-하지만 고장이 나기도 쉽고,
-유지비가 많이 들거나, 효과가 약할 때도 있습니다.
-그래서 더 확실한 경고 시스템이 필요합니다.”
+🟦 UI DEMO
 
 ⸻
 
-📌 슬라이드 7 — 프로젝트 헤일로
+🟦 5. Home page
 
-“그래서 저희는 헤일로 시스템을 만들었습니다.
-이 시스템은 스마트폰, 웨어러블, CCTV 같은 정보를 모아서
-주변에 위험이 있으면 미리 알려주는 기능을 합니다.
-작업자, 보행자, 운전자 모두에게 도움이 되는 시스템입니다.”
-
-⸻
-
-📌 슬라이드 8 — 스마트 경보 기능
-
-“헤일로는 사용자의 위치와 주변 차량을 함께 분석합니다.
-차가 가까이 오면 스마트폰 화면으로 알려 주고,
-이어폰을 끼고 있으면 왼쪽·오른쪽 방향까지 소리로 알려 줍니다.
-그래서 더 빨리, 더 정확하게 위험을 알 수 있습니다.”
+“Now I will show the website.
+This is the Home page.
+Here we can see a simple welcome UI and navigation to other pages.”
 
 ⸻
 
-📌 슬라이드 9 — 장점
+🟦 6. Users page
 
-“이 시스템의 장점은 간단합니다.
-첫째, 여러 정보를 모아서 더 정확하게 위험을 판단할 수 있습니다.
-둘째, 화면이나 소리로 바로 알려 주기 때문에
-일을 하거나 걷는 중에도 쉽게 알 수 있습니다.
-셋째, 사용하기 어렵지 않아서 누구나 편하게 쓸 수 있습니다.”
+“This is the Users page.
+All users from the database are shown in a table.
+There is also a plus button to add a new user.”
 
 ⸻
 
-📌 슬라이드 10 — 마무리
+🟦 7. Cars page
 
-“프로젝트 헤일로의 목표는 사람들의 안전입니다.
-작업자와 보행자가 사고 없이 생활할 수 있도록 돕는 것입니다.
-저희 아이디어가 많은 사고를 줄이는 데 도움이 되길 바랍니다.
-들어주셔서 감사합니다.”
+“Here is the Cars page.
+Cars are shown as cards with images, model name, year, price, and availability.
+This page looks a bit nicer because of the images.”
 
-end
+⸻
 
-“저희가 말씀드린 내용들은 사실 우리 주변에서도 자주 볼 수 있는 문제들입니다.
-그래서 이런 문제를 조금이라도 줄일 수 있는 방법을 찾는 것이 중요하다고 생각합니다.
-저희 프로젝트가 완벽하진 않지만, 위험을 줄이는 데 분명 도움이 될 수 있다고 믿습니다.
-앞으로 더 발전시키면 실제 현장에서도 충분히 사용할 수 있을 것 같습니다.
-작은 변화라도 사람들의 안전에 도움이 된다면 그걸로도 큰 의미가 있다고 생각합니다.”
+🟦 8. Manufacturers
 
+“This page shows car manufacturers.
+Each one is in a card with its logo, name, country, and year.”
 
+⸻
+
+🟦 9. Payment Cards
+
+“Here are the payment cards.
+I styled them to look like real credit cards.
+All data comes from the database.”
+
+⸻
+
+🟦 10. Rentals
+
+“This is the Rentals page.
+Here the rental records are shown in a simple table.”
+
+⸻
+
+🟦 INSERT DEMO
+
+⸻
+
+🟦 11. Add User demo
+
+“Now I will add a new user.
+I go to Users, click the plus button.
+I fill the form with some simple data and click Submit.
+
+After submitting, the new user is saved in the database.
+When I return to the Users page, I can see the new user in the table.”
+
+⸻
+
+🟦 12. Add Car demo
+
+“Next, I will add a new car.
+I click the plus button on the Cars page.
+I write the car number, model, year, color, rate, and the manufacturer ID.
+Then I submit the form.
+
+Now we can see the new car on the Cars page, and the image is shown correctly.”
+
+⸻
+
+🟦 13. Ending
+
+“So, this is my HW3 Flask project.
+The website connects to the HW2 database, shows the data, and also inserts new data.
+Thank you for watching.”
