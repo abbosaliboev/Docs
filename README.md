@@ -1,102 +1,158 @@
+🚀 Remme AI — 스마트 라이프 관리 앱
 
+Remme AI는 AI를 활용하여
+👉 시간과 돈을 함께 관리해주는 스마트 앱입니다.
 
-| English                        | O‘zbekcha tarjima                     | O‘zbekcha talaffuz          |
-| ------------------------------ | ------------------------------------- | --------------------------- |
-| activities and sports          | faoliyatlar va sportlar               | aktivitis end sports        |
-| bake cakes                     | tort pishirmoq                        | beyk keys                   |
-| collect figures, cards, stamps | figuralar, kartalar, markalar yig‘moq | kollekt figurz kards stэмps |
-| draw                           | rasm chizmoq                          | dro                         |
-| hang out with friends          | do‘stlar bilan vaqt o‘tkazmoq         | heng aut uiz frendz         |
-| make clothes                   | kiyim tikmoq                          | meyk klouziz                |
-| read books                     | kitob o‘qimoq                         | rid buks                    |
-| read magazines                 | jurnal o‘qimoq                        | rid megezins                |
-| text your friends              | do‘stlarga SMS yozmoq                 | tekst yor frendz            |
-| use social media               | ijtimoiy tarmoqlardan foydalanmoq     | yuz souʃl midia             |
-| video blog                     | video blog yuritmoq                   | video blog                  |
-| watch videos online            | internetda video ko‘rmoq              | uoch videouz onlayn         |
+사용자는 복잡한 입력 없이
+👉 말하거나 쓰기만 하면
+👉 AI가 자동으로 이해하고 정리합니다.
 
-### Sports va faoliyatlar
+⸻
 
-| English              | O‘zbekcha tarjima                 | O‘zbekcha talaffuz |
-| -------------------- | --------------------------------- | ------------------ |
-| do, play or go       | shug‘ullanmoq / o‘ynamoq / bormoq | du plei or go      |
-| ballet               | balet                             | balei              |
-| ballroom dancing     | bal zal raqsi                     | bolrum densing     |
-| basketball           | basketbol                         | basketbol          |
-| BMXing               | BMX velosport                     | bi-em-eksing       |
-| board games          | stol o‘yinlari                    | bord geymz         |
-| bowling              | bouling                           | bouling            |
-| camping              | chodirda dam olish                | kemping            |
-| cards                | karta o‘yini                      | kards              |
-| chess                | shaxmat                           | ches               |
-| cycling              | velosiped haydash                 | saykling           |
-| drama                | teatr / drama                     | drama              |
-| gymnastics           | gimnastika                        | jimnastiks         |
-| horse riding         | ot minish                         | hors rayding       |
-| ice hockey           | muz ustida xokkey                 | ays hokey          |
-| ice skating          | konkida uchish                    | ays skeyting       |
-| martial arts         | jang san’atlari                   | marshl arts        |
-| a musical instrument | musiqa asbobi                     | myuzikl instrument |
-| photography          | fotografiya                       | fotogrefi          |
-| rollerblading        | rolik uchish                      | rolər-bley-ding    |
-| running              | yugurish                          | raning             |
-| shopping             | xarid qilish                      | shoping            |
-| skateboarding        | skeytbord uchish                  | skeytbording       |
-| table tennis         | stol tennisi                      | teybl tenis        |
-| volleyball           | voleybol                          | voleybol           |
-| weights              | og‘irlik ko‘tarish                | ueyts              |
+💡 What (무엇인가?)
 
+👉 일정, 지출, 수입을 한 번에 관리하는
+AI 기반 개인 라이프 매니저 앱
+	•	자연어 입력 (음성/텍스트)
+	•	자동 분류 및 저장
+	•	하나의 앱에서 통합 관리
 
+⸻
 
-## 🟢 DO ishlatiladi
+👤 Who (누구를 위한 앱인가?)
 
-(Odatda individual sport yoki mashg‘ulotlar bilan)
+👉 다음과 같은 사람들을 위한 앱입니다:
+	•	바쁜 학생 / 직장인
+	•	돈과 시간을 함께 관리하고 싶은 사람
+	•	기록을 쉽게 하고 싶은 사람
+	•	팀 또는 친구와 함께 관리하고 싶은 사람
 
-| Birikma         | Tarjima                             |
-| --------------- | ----------------------------------- |
-| do ballet       | balet bilan shug‘ullanmoq           |
-| do gymnastics   | gimnastika bilan shug‘ullanmoq      |
-| do martial arts | jang san’atlari bilan shug‘ullanmoq |
-| do photography  | fotografiya bilan shug‘ullanmoq     |
-| do drama        | drama / teatr bilan shug‘ullanmoq   |
-| do weights      | og‘irlik ko‘tarish mashqi qilmoq    |
+👉 결론: 더 효율적인 삶을 원하는 누구나
 
-## 🔵 PLAY ishlatiladi
+⸻
 
-(Odatda **o‘yinlar va jamoaviy sportlar** bilan)
+📍 Where (어디서 사용하나요?)
+	•	모바일 / 웹 환경
+	•	언제 어디서든 사용 가능
+	•	외부 서비스와 연동:
+	•	Google Calendar
+	•	Notion
 
-| Birikma           | Tarjima                    |
-| ----------------- | -------------------------- |
-| play basketball   | basketbol o‘ynamoq         |
-| play board games  | stol o‘yinlarini o‘ynamoq  |
-| play cards        | karta o‘ynamoq             |
-| play chess        | shaxmat o‘ynamoq           |
-| play ice hockey   | muz ustida xokkey o‘ynamoq |
-| play table tennis | stol tennisi o‘ynamoq      |
-| play volleyball   | voleybol o‘ynamoq          |
+⸻
 
-## 🟠 GO ishlatiladi
+⏰ When (언제 사용하나요?)
 
-(Odatda **-ing bilan tugagan faoliyatlar**)
+👉 일상 속 모든 순간:
+	•	지출이 생겼을 때
+	•	일정을 추가해야 할 때
+	•	해야 할 일을 기억해야 할 때
 
-| Birikma             | Tarjima                    |
-| ------------------- | -------------------------- |
-| go BMXing           | BMX minmoq                 |
-| go bowling          | bouling o‘ynashga bormoq   |
-| go camping          | campingga bormoq           |
-| go cycling          | velosiped haydashga bormoq |
-| go horse riding     | ot minishga bormoq         |
-| go ice skating      | konkida uchishga bormoq    |
-| go rollerblading    | rolik uchishga bormoq      |
-| go running          | yugurishga bormoq          |
-| go shopping         | xarid qilishga bormoq      |
-| go skateboarding    | skeytbord uchishga bormoq  |
-| go ballroom dancing | bal zal raqsiga bormoq     |
+👉 생각나는 순간 바로 사용
 
-✅ **Qisqa qoida eslab qolish uchun:**
+⸻
 
-* **play** → o‘yinlar (ball, game)
-* **go** → **-ing** bilan tugagan faoliyatlar
-* **do** → mashg‘ulotlar va individual sportlar
+❓ Why (왜 필요한가?)
 
+👉 기존 앱들의 문제:
+	•	가계부 앱 → 입력이 번거로움
+	•	캘린더 앱 → 따로 관리해야 함
+	•	메모 앱 → 구조화되지 않음
 
+👉 즉,
+모든 것을 따로 관리해야 해서 비효율적임
+
+⸻
+
+✅ Remme AI의 해결 방식
+
+👉 하나의 앱으로 모든 것을 해결
+	•	입력 부담 제거 → AI 자동 처리
+	•	시간 + 돈 통합 관리
+	•	사용자 행동 최소화
+
+⸻
+
+🚀 핵심 가치
+	1.	Zero Input Experience
+→ 사용자는 그냥 말하거나 쓰기만 하면 됨
+	2.	AI Automation
+→ 분류, 분석, 저장까지 자동
+	3.	All-in-One System
+→ 여러 앱을 하나로 통합
+	4.	Smart Prediction
+→ 미래 소비까지 예측
+
+⸻
+
+🧠 주요 기능 (Key Features)
+
+🎙️ Voice AI
+	•	자연스럽게 말하면 자동 처리
+
+⸻
+
+✍️ AI 텍스트 분석
+	•	자유 입력 → 자동 분류
+	•	지출 / 수입 / 일정 / 할 일
+
+⸻
+
+🧾 영수증 분석 🔥
+	•	사진 업로드 → 자동 인식
+	•	금액
+	•	날짜
+→ 지출로 자동 저장
+
+⸻
+
+📅 캘린더 통합
+	•	내부 캘린더 + 외부 연동
+	•	Google Calendar
+	•	Notion
+
+⸻
+
+⏰ 스마트 알림
+	•	자연어 기반 알림 설정
+	•	사전 알림 지원
+
+⸻
+
+💸 금융 관리
+	•	지출 / 수입 / 빚 추적
+	•	AI 자동 카테고리 분류
+
+⸻
+
+📊 분석 & 리포트
+	•	월별 / 주별 통계
+	•	시각화된 데이터
+
+⸻
+
+🔮 AI 예측
+	•	다음 달 소비 예측
+	•	패턴 기반 분석
+
+⸻
+
+👥 그룹 기능
+	•	팀 / 친구와 함께 사용
+	•	공동 지출 및 일정 관리
+
+⸻
+
+⚡ Why Tartib AI Stands Out
+
+👉 단순한 기능이 아니라 사용 방식 자체를 바꿉니다
+	•	기존: 앱을 사용자가 관리
+	•	Tartib AI: 앱이 사용자를 대신 관리
+
+⸻
+
+🎯 한 줄 요약
+
+👉 “Remme AI는 AI를 통해
+시간과 돈을 자동으로 관리해주는 스마트 라이프 매니저입니다.”
+
+⸻
