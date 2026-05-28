@@ -382,7 +382,6 @@ Total classifier: ~4-5ms
 ## 10. Next Steps
 
 ```
-[ ] Ertaga professor bilan uchrashish → PGST-GNN g'oyasini muhokama qilish
 [ ] Ai-Hub dataset access olish (aihub.or.kr, CBNU email)
 [ ] YOLOv8-Pose fine-tuning Ai-Hub construction data bilan
 [ ] PGST-GNN implement qilish (PyTorch Geometric)
